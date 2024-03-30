@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+rtimport { configureStore } from "@reduxjs/toolkit";
 import todosSlice from "./features/todos/todosSlice";
 
 // Load todos from local storage
@@ -15,7 +15,7 @@ const loadFromLocalStorage = () => {
 
 const persistedState = loadFromLocalStorage();
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     todos: todosSlice,
   },
